@@ -1,0 +1,27 @@
+<section class="Create">
+  <div class="Create_Container">
+    <div class="Form">
+      <div class="Form_Input">
+        <label>Title</label>
+        <input type="text" [(ngModel)]="Data.title">
+      </div>
+      <div class="Form_Input">
+        <label>Title</label>
+        <textarea cols="30" rows="10" [(ngModel)]="Data.description"></textarea>
+      </div>
+      <div class="Form_Input">
+        <label>Tags</label>
+        <input type="text" [(ngModel)]="Tag">
+        <button (click)="addTag()">+</button>
+      </div>
+      <div class="Form_Tags">
+        <div class="Tag" *ngFor="let tag of Tags">
+          <span>{{ tag }}</span>
+        </div>
+      </div>
+      <div class="Form_Submit">
+        <button (click)="saveData()">Submit</button>
+      </div>
+    </div>
+  </div>
+</section>

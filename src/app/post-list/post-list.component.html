@@ -1,0 +1,17 @@
+<section class="Posts">
+  <div class="Posts_Container">
+    <div class="Post" *ngFor="let post of Posts">
+      <div class="Post_Header"
+        [ngStyle]="{'background-image': 'url(' + Base_Url_Img + post.photoUrl + ')'}"></div>
+      <div class="Post_Body">
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.description }}</p>
+        <div class="Post_Body_Tags">
+            <div class="Post_Body_Tags-tag" *ngFor="let tag of post.tags">
+              <span>{{ tag }}</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
