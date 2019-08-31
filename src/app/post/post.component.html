@@ -1,0 +1,19 @@
+<div class="Post-Wrapper">
+  <div class="Post">
+    <div
+      class="Post_Header"
+      [ngStyle]="{
+        'background-image': 'url(' + Base_Url_Img + Post.photoUrl + ')'
+      }"
+    ></div>
+    <div class="Post_Body">
+      <h4>{{ Post.title }}</h4>
+      <p>{{ Post.description }}</p>
+      <div class="Post_Body_Tags">
+        <div class="Post_Body_Tags-tag" *ngFor="let tag of Post.tags">
+          <span>{{ tag }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,6 +14,10 @@ export class MainService {
     return this.http.get(this.BASE_API_URL + '/posts');
   }
 
+  public getPost(id) {
+    return this.http.get(this.BASE_API_URL + '/posts/' + id);
+  }
+
   public createPost(data) {
     this.http.post(this.BASE_API_URL + '/posts', data)
       .subscribe( res => {
