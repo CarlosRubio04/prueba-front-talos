@@ -1,0 +1,46 @@
+.Create {
+    position: relative;
+    margin-top: 80px;
+    &_Container {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, 1fr );
+        grid-gap: 20px;
+        justify-content: space-between;
+    }
+}
+.Form {
+    padding: 20px;
+
+    &_Input {
+        margin: 10px 0;
+    }
+    .special-input {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+
+        .wrap-btn {
+            margin-left: 6px;
+        }
+    }
+
+    &_Tags {
+        display: flex;
+        flex-wrap: wrap;
+        &-tag {
+            padding: 4px 6px;
+            font-size: 12px;
+            background-color: #eee;
+            margin: 0 4px 0 0;
+            border-radius: 8px;
+
+            span b {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &_Submit {
+        padding-top: 10px;
+    }
+}

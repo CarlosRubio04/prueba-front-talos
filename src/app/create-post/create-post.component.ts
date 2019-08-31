@@ -19,6 +19,9 @@ export class CreatePostComponent implements OnInit {
     this.Tags.push(this.Tag);
     this.Tag = '';
   }
+  removeTag(i) {
+    this.Tags.splice(i, 1);
+  }
   saveData() {
     this.Data.tags = this.Tags;
     this.mainService.createPost(this.Data);

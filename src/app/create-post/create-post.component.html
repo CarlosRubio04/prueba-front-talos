@@ -6,22 +6,29 @@
         <input type="text" [(ngModel)]="Data.title">
       </div>
       <div class="Form_Input">
-        <label>Title</label>
+        <label>Description</label>
         <textarea cols="30" rows="10" [(ngModel)]="Data.description"></textarea>
       </div>
-      <div class="Form_Input">
-        <label>Tags</label>
-        <input type="text" [(ngModel)]="Tag">
-        <button (click)="addTag()">+</button>
+      <div class="Form_Input special-input">
+        <div class="wrap-inp">
+          <label>Tags</label>
+          <input type="text" [(ngModel)]="Tag">
+        </div>
+        <div class="wrap-btn">
+          <button (click)="addTag()" class="btn">Add Tag</button>
+        </div>
       </div>
       <div class="Form_Tags">
-        <div class="Tag" *ngFor="let tag of Tags">
-          <span>{{ tag }}</span>
+        <div class="Form_Tags-tag" *ngFor="let tag of Tags; let i = index">
+          <span>{{ tag }} <b (click)="removeTag(i)">X</b></span>
         </div>
       </div>
       <div class="Form_Submit">
-        <button (click)="saveData()">Submit</button>
+        <button (click)="saveData()" class="btn">Submit</button>
       </div>
+    </div>
+    <div class="Image">
+
     </div>
   </div>
 </section>

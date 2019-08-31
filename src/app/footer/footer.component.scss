@@ -1,0 +1,13 @@
+.Footer {
+    position: fixed;
+    bottom: 0;
+    padding: 4px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
+
+    &_Container {
+        text-align: center;
+        font-size: 10px;
+    }
+}
